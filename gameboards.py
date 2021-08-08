@@ -1,12 +1,12 @@
-start_game_board = []
-
-for i in range(4):
-  start_game_board.append([" ________  " * 4, "\n| /\   _ | | /\   _ | | /\   _ | | /\   _ |", "\n|/__\/_ /| |/__\/_ /| |/__\/_ /| |/__\/_ /|",
-  "\n|  _  /\ | |  _  /\ | |  _  /\ | |  _  /\ |", "\n|_|_|_\/_| |_|_|_\/_| |_|_|_\/_| |_|_|_\/_|\n"]) 
 
 def print_board(game_board):
   for row in game_board:
     print("".join(row))
+
+start_game_board = []
+for i in range(4):
+  start_game_board.append([" ________  " * 4, "\n| /\   _ | | /\   _ | | /\   _ | | /\   _ |", "\n|/__\/_ /| |/__\/_ /| |/__\/_ /| |/__\/_ /|",
+  "\n|  _  /\ | |  _  /\ | |  _  /\ | |  _  /\ |", "\n|_|_|_\/_| |_|_|_\/_| |_|_|_\/_| |_|_|_\/_|\n"]) 
 
 larg_tri_1x1 = []
 larg_tri_1x1.append([" ________  " * 4, "\n|   /\   | | /\   _ | | /\   _ | | /\   _ |", "\n|  /  \  | |/__\/_ /| |/__\/_ /| |/__\/_ /|", 
@@ -1047,5 +1047,38 @@ small_diamd_boards.append(small_diamd_4x1)
 small_diamd_boards.append(small_diamd_4x2)
 small_diamd_boards.append(small_diamd_4x3)
 small_diamd_boards.append(small_diamd_4x4)
+
+game_boards_dict = {"larg_tri_1x1": larg_tri_boards[0], "larg_tri_1x2": larg_tri_boards[1], "larg_tri_1x3": larg_tri_boards[2], "larg_tri_1x4": larg_tri_boards[3], 
+"larg_tri_2x1": larg_tri_boards[4], "larg_tri_2x2": larg_tri_boards[5], "larg_tri_2x3": larg_tri_boards[6], "larg_tri_2x4": larg_tri_boards[7], 
+"larg_tri_3x1": larg_tri_boards[8], "larg_tri_3x2": larg_tri_boards[9], "larg_tri_3x3": larg_tri_boards[10], "larg_tri_3x4": larg_tri_boards[11], 
+"larg_tri_4x1": larg_tri_boards[12], "larg_tri_4x2": larg_tri_boards[13], "larg_tri_4x3": larg_tri_boards[14], "larg_tri_4x4": larg_tri_boards[15], 
+"small_tri_1x1": small_tri_boards[0], "small_tri_1x2": small_tri_boards[1], "small_tri_1x3": small_tri_boards[2], "small_tri_1x4": small_tri_boards[3], 
+"small_tri_2x1": small_tri_boards[4], "small_tri_2x2": small_tri_boards[5], "small_tri_2x3": small_tri_boards[6], "small_tri_2x4": small_tri_boards[7], 
+"small_tri_3x1": small_tri_boards[8], "small_tri_3x2": small_tri_boards[9], "small_tri_3x3": small_tri_3x3, "small_tri_3x4": small_tri_3x4, 
+"small_tri_4x1": small_tri_boards[12], "small_tri_4x2": small_tri_4x2, "small_tri_4x3": small_tri_4x3, "small_tri_4x4": small_tri_boards[15], 
+"larg_squ_1x1": larg_squ_boards[0], "larg_squ_1x2": larg_squ_boards[1], "larg_squ_1x3": larg_squ_boards[2], "larg_squ_1x4": larg_squ_boards[3], 
+"larg_squ_2x1": larg_squ_boards[4], "larg_squ_2x2": larg_squ_boards[5], "larg_squ_2x3": larg_squ_boards[6], "larg_squ_2x4": larg_squ_boards[7], 
+"larg_squ_3x1": larg_squ_boards[8], "larg_squ_3x2": larg_squ_boards[9], "larg_squ_3x3": larg_squ_boards[10], "larg_squ_3x4": larg_squ_boards[11], 
+"larg_squ_4x1": larg_squ_boards[12], "larg_squ_4x2": larg_squ_boards[13], "larg_squ_4x3": larg_squ_boards[14], "larg_squ_4x4": larg_squ_boards[15], 
+"small_squ_1x1": small_squ_boards[0], "small_squ_1x2": small_squ_boards[1], "small_squ_1x3": small_squ_boards[2], "small_squ_1x4": small_squ_boards[3], 
+"small_squ_2x1": small_squ_boards[4], "small_squ_2x2": small_squ_boards[5], "small_squ_2x3": small_squ_boards[6], "small_squ_2x4": small_squ_boards[7], 
+"small_squ_3x1": small_squ_boards[8], "small_squ_3x2": small_squ_boards[9], "small_squ_3x3": small_squ_boards[10], "small_squ_3x4": small_squ_boards[11], 
+"small_squ_4x1": small_squ_boards[12], "small_squ_4x2": small_squ_boards[13], "small_squ_4x3": small_squ_boards[14], "small_squ_4x4": small_squ_boards[15], 
+"larg_paral_1x1": larg_paral_boards[0], "larg_paral_1x2": larg_paral_boards[1], "larg_paral_1x3": larg_paral_boards[2], "larg_paral_1x4": larg_paral_boards[3], 
+"larg_paral_2x1": larg_paral_boards[4], "larg_paral_2x2": larg_paral_boards[5], "larg_paral_2x3": larg_paral_boards[6], "larg_paral_2x4": larg_paral_boards[7], 
+"larg_paral_3x1": larg_paral_boards[8], "larg_paral_3x2": larg_paral_boards[9], "larg_paral_3x3": larg_paral_boards[10], "larg_paral_3x4": larg_paral_boards[11], 
+"larg_paral_4x1": larg_paral_boards[12], "larg_paral_4x2": larg_paral_boards[13], "larg_paral_4x3": larg_paral_boards[14], "larg_paral_4x4": larg_paral_boards[15], 
+"small_paral_1x1": small_paral_boards[0], "small_paral_1x2": small_paral_boards[1], "small_paral_1x3": small_paral_boards[2], "small_paral_1x4": small_paral_boards[3], 
+"small_paral_2x1": small_paral_boards[4], "small_paral_2x2": small_paral_boards[5], "small_paral_2x3": small_paral_boards[6], "small_paral_2x4": small_paral_boards[7], 
+"small_paral_3x1": small_paral_boards[8], "small_paral_3x2": small_paral_boards[9], "small_paral_3x3": small_paral_boards[10], "small_paral_3x4": small_paral_boards[11], 
+"small_paral_4x1": small_paral_boards[12], "small_paral_4x2": small_paral_boards[13], "small_paral_4x3": small_paral_boards[14], "small_paral_4x4": small_paral_boards[15], 
+"larg_diamd_1x1": larg_diamd_boards[0], "larg_diamd_1x2": larg_diamd_boards[1], "larg_diamd_1x3": larg_diamd_boards[2], "larg_diamd_1x4": larg_diamd_boards[3], 
+"larg_diamd_2x1": larg_diamd_boards[4], "larg_diamd_2x2": larg_diamd_boards[5], "larg_diamd_2x3": larg_diamd_boards[6], "larg_diamd_2x4": larg_diamd_boards[7], 
+"larg_diamd_3x1": larg_diamd_boards[8], "larg_diamd_3x2": larg_diamd_boards[9], "larg_diamd_3x3": larg_diamd_boards[10], "larg_diamd_3x4": larg_diamd_boards[11], 
+"larg_diamd_4x1": larg_diamd_boards[12], "larg_diamd_4x2": larg_diamd_boards[13], "larg_diamd_4x3": larg_diamd_boards[14], "larg_diamd_4x4": larg_diamd_boards[15], 
+"small_diamd_1x1": small_diamd_boards[0], "small_diamd_1x2": small_diamd_boards[1], "small_diamd_1x3": small_diamd_boards[2], "small_diamd_1x4": small_diamd_boards[3], 
+"small_diamd_2x1": small_diamd_boards[4], "small_diamd_2x2": small_diamd_boards[5], "small_diamd_2x3": small_diamd_boards[6], "small_diamd_2x4": small_diamd_boards[7], 
+"small_diamd_3x1": small_diamd_boards[8], "small_diamd_3x2": small_diamd_boards[9], "small_diamd_3x3": small_diamd_boards[10], "small_diamd_3x4": small_diamd_boards[11], 
+"small_diamd_4x1": small_diamd_boards[12], "small_diamd_4x2": small_diamd_boards[13], "small_diamd_4x3": small_diamd_boards[14], "small_diamd_4x4": small_diamd_boards[15]} 
 
 #print_board(start_game_board)
