@@ -1,3 +1,6 @@
+# Print board function, start board without game shapes, game boards for large and small size of four shapes 
+# (triangle, square, parallelogram, and diamond) in each spot of 4x4 board, and game boards dictionary that 
+# pairs a name with each game board
 
 def print_board(game_board):
   for row in game_board:
@@ -1080,5 +1083,3 @@ game_boards_dict = {"larg_tri_1x1": larg_tri_boards[0], "larg_tri_1x2": larg_tri
 "small_diamd_2x1": small_diamd_boards[4], "small_diamd_2x2": small_diamd_boards[5], "small_diamd_2x3": small_diamd_boards[6], "small_diamd_2x4": small_diamd_boards[7], 
 "small_diamd_3x1": small_diamd_boards[8], "small_diamd_3x2": small_diamd_boards[9], "small_diamd_3x3": small_diamd_boards[10], "small_diamd_3x4": small_diamd_boards[11], 
 "small_diamd_4x1": small_diamd_boards[12], "small_diamd_4x2": small_diamd_boards[13], "small_diamd_4x3": small_diamd_boards[14], "small_diamd_4x4": small_diamd_boards[15]} 
-
-#print_board(start_game_board)
