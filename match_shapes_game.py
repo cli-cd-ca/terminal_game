@@ -28,7 +28,13 @@ def game_board_solution():
     game_board_solution_dict[i] = piece
     game_board_pieces.pop(game_board_pieces.index(piece))
 
+def start_game_setup():
+  print("_____________ Match the Shapes ____________")
+  print_board(start_game_board)
+  print("Enter row and column number to flip pieces")
+
 game_board_solution()
 print(game_board_solution_dict.values())
 print(game_board_solution_dict)
+start_game_setup()
 
