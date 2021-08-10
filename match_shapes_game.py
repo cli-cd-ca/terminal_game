@@ -33,8 +33,68 @@ def start_game_setup():
   print_board(start_game_board)
   print("Enter row and column number to flip pieces")
 
+def play_game():
+  flipped_pieces = []
+  for i in range(100):
+    row_num = input("Row: ")
+    column_num = input("Column: ")
+    if row_num == "" and column_num == "":
+      exit_game = input("Do you want to exit the game? (y/n) ")
+      if exit_game == "n":
+        continue
+      quit()
+    elif row_num not in ['1', '2', '3', '4'] or column_num not in ['1', '2', '3', '4']:
+      print("Enter 1, 2, 3, or 4")
+      continue
+    else:
+      player_piece = row_num + "x" + column_num
+      shape_num = game_board_solution_dict[game_board_dict[player_piece]]
+      if shape_num in matched_shapes:
+        print("You already matched that shape")
+        continue
+      flipped_pieces.append(shape_num)
+      print(flipped_pieces)
+      player_board = shapes_dict[shape_num] + player_piece
+      print("\n" * 986)
+      print_board(game_boards_dict[player_board])
+      if flipped_pieces in matching_shapes:
+        matched_shapes_(flipped_pieces)
+      if len(flipped_pieces) == 3:
+        flipped_pieces.pop(0)
+      if flipped_pieces in matching_shapes:
+        matched_shapes_(flipped_pieces)
+      print(flipped_pieces)
+      if len(matching_shapes) == 8:
+        win_game()
+        quit()
+
+def matched_shapes_(flipped_pieces):
+  print("You matched the shapes!")
+  matched_shapes.extend(flipped_pieces)
+  game_board_pieces.extend(flipped_pieces)
+  matching_shapes.remove(flipped_pieces)
+  print(matching_shapes)
+  print(matched_shapes)
+
+def win_game():
+  print("Game won! You matched all the shapes!")
+  matched_shapes.sort()
+  matched_shapes_paired = [[x, x + 8] for x in matched_shapes[:8]]
+  matched_shapes_paired.extend([[x, x - 8] for x in matched_shapes[8:]])
+  matching_shapes.extend([pair for pair in matched_shapes_paired if pair not in matching_shapes])
+  matching_shapes.sort()
+  print(matching_shapes)
+  matched_shapes.clear()
+  play_again = input("Would you like to play again? (y/n) ")
+  if play_again == "y":
+    game_board_solution()
+    print(game_board_solution_dict.values())
+    print(game_board_solution_dict)
+    start_game_setup()
+    play_game()
+
 game_board_solution()
 print(game_board_solution_dict.values())
 print(game_board_solution_dict)
 start_game_setup()
-
+play_game()
