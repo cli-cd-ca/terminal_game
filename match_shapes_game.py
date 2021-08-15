@@ -1,36 +1,37 @@
-# Match the images memory game with shapes in 4x4 board where player flips pieces using row and column number until they match all the shapes
+# Codecademy - CS101: Introduction to Programming - Final Project
+# Match the images memory game with shapes in 4x4 board where player flips pieces using row and column number until they match all shapes
 
 # imports print board function, start board, game boards for each sized shape, and game boards dictionary from game boards file
 from gameboards import print_board, start_game_board, larg_tri_boards, small_tri_boards, larg_squ_boards, small_squ_boards, larg_paral_boards, small_paral_boards, larg_diamd_boards, small_diamd_boards, game_boards_dict
 import random
 
 # Numbers that represent pairs of four shapes (triangle, square, parallelogram, and diamond) 
-# in large and small sizes (16 total) to assign random shapes to every piece in the game board
+# in large and small sizes to assign random shapes to every piece in the game board
 # solution dictionary
 game_board_pieces = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
 
-# The random shape assigned to every piece on 4x4 board with zero assigned before first game
+# The random shape assigned to every spot on 4x4 board with zero assigned before first game
 # solution
 game_board_solution_dict = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 
 12: 0, 13: 0, 14: 0, 15: 0, 16: 0}
 
-# A string description of every piece on 4x4 board that corresponds to the player's
+# A string name of every piece on 4x4 board that corresponds to the player's
 # row and column number and each piece in the game board solution dictionary
 game_board_dict = {"1x1": 1, "1x2": 2, "1x3": 3, "1x4": 4, "2x1": 5, "2x2": 6, "2x3": 7, "2x4": 8,
 "3x1": 9, "3x2": 10, "3x3": 11, "3x4": 12, "4x1": 13, "4x2": 14, "4x3": 15, "4x4": 16}
 
-# Number that represents every shape and its pair with a string description to identify 
+# Number that represents every shape and its pair with a string name to identify 
 # game boards that correspond to the game board solution
 shapes_dict = {1: "larg_tri_", 2: "small_tri_", 3: "larg_squ_", 4: "small_squ_", 5: "larg_paral_", 6: "small_paral_", 
 7: "larg_diamd_", 8: "small_diamd_", 9: "larg_tri_", 10: "small_tri_", 11: "larg_squ_", 12: "small_squ_", 13: "larg_paral_",
 14: "small_paral_", 15: "larg_diamd_", 16: "small_diamd_"}
 
 # List of matching shapes from shapes dictionary to identify when player matches shapes
-# (the pairs are inverted so the player can match shapes in any order)
+# (the pairs are reversed so the player can match shapes in any order)
 matching_shapes = [[1, 9], [9, 1], [2, 10], [10, 2], [3, 11], [11, 3], [4, 12], [12, 4], [5, 13], [13, 5], 
 [6, 14], [14, 6], [7, 15], [15, 7], [8, 16], [16, 8]]
 
-# Empty list that holds pairs matched from matching shapes above when player matches shapes
+# Empty list that holds shapes matched from matching shapes above when player matches shapes
 matched_shapes = []
 
 # Assigns random shapes from game board pieces to solution dictionary
@@ -85,8 +86,8 @@ def matched_shapes_(flipped_pieces):
   game_board_pieces.extend(flipped_pieces)
   matching_shapes.remove(flipped_pieces)
 
-# Called when player matches 8 shape pairs from matching pairs list and 8 pairs remain 
-# and allows the player to play again or quit the game 
+# Called when player matches 8 pairs from matching shapes list and 8 pairs remain 
+# and allows player to play again or exit game 
 def win_game():
   print("Game won! You matched all the shapes!")
   matched_shapes.sort()

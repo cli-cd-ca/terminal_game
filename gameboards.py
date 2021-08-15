@@ -1,3 +1,4 @@
+# Codecademy - CS101: Introduction to Programming - Final Project
 # Print board function, start board without game shapes, game boards for large and small size of four shapes 
 # (triangle, square, parallelogram, and diamond) in each spot of 4x4 board, and game boards dictionary that 
 # pairs a name with each game board
@@ -1063,7 +1064,7 @@ small_diamd_boards.append(small_diamd_4x2)
 small_diamd_boards.append(small_diamd_4x3)
 small_diamd_boards.append(small_diamd_4x4)
 
-# Pairs each game board with a string description from the player's row and column input 
+# Pairs each game board with a string name from the player's row and column input 
 # and the shape assigned to that spot from the game board solution to print the correct 
 # board for the current game
 game_boards_dict = {"larg_tri_1x1": larg_tri_boards[0], "larg_tri_1x2": larg_tri_boards[1], "larg_tri_1x3": larg_tri_boards[2], "larg_tri_1x4": larg_tri_boards[3], 
