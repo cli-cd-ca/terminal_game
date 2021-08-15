@@ -67,17 +67,13 @@ def play_game():
         print("You already matched that shape")
         continue
       flipped_pieces.append(shape_num)
-      #print(flipped_pieces)
       player_board = shapes_dict[shape_num] + player_piece
-      print("\n" * 1005)
+      print("\n" * 1010)
       print_board(game_boards_dict[player_board])
-      if flipped_pieces in matching_shapes:
-        matched_shapes_(flipped_pieces)
       if len(flipped_pieces) == 3:
         flipped_pieces.pop(0)
       if flipped_pieces in matching_shapes:
         matched_shapes_(flipped_pieces)
-      #print(flipped_pieces)
       if len(matching_shapes) == 8:
         win_game()
         quit()
@@ -88,8 +84,6 @@ def matched_shapes_(flipped_pieces):
   matched_shapes.extend(flipped_pieces)
   game_board_pieces.extend(flipped_pieces)
   matching_shapes.remove(flipped_pieces)
-  #print(matching_shapes)
-  #print(matched_shapes)
 
 # Called when player matches 8 shape pairs from matching pairs list and 8 pairs remain 
 # and allows the player to play again or quit the game 
@@ -100,20 +94,15 @@ def win_game():
   matched_shapes_paired.extend([[x, x - 8] for x in matched_shapes[8:]])
   matching_shapes.extend([pair for pair in matched_shapes_paired if pair not in matching_shapes])
   matching_shapes.sort()
-  #print(matching_shapes)
   matched_shapes.clear()
   play_again = input("Would you like to play again? (y/n) ")
   if play_again == "y":
+    print("\n" * 1010)
     game_board_solution()
-    #print(game_board_solution_dict.values())
-    #print(game_board_solution_dict)
-    print("\n" * 1005)
     start_game_setup()
     play_game()
 
 # Calls the first game with solution, start game setup, and play game functions
 game_board_solution()
-#print(game_board_solution_dict.values())
-#print(game_board_solution_dict)
 start_game_setup()
 play_game()
