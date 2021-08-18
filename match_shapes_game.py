@@ -8,7 +8,7 @@ import random
 # Numbers that represent pairs of four shapes (triangle, square, parallelogram, and diamond) 
 # in large and small sizes to assign random shapes to every piece in the game board
 # solution dictionary
-game_board_pieces = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+shape_nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
 
 # The random shape assigned to every spot on 4x4 board with zero assigned before first game
 # solution
@@ -34,12 +34,12 @@ matching_shapes = [[1, 9], [9, 1], [2, 10], [10, 2], [3, 11], [11, 3], [4, 12], 
 # Empty list that holds shapes matched from matching shapes above when player matches shapes
 matched_shapes = []
 
-# Assigns random shapes from game board pieces to solution dictionary
+# Assigns random shapes from shape numbers list to solution dictionary
 def game_board_solution():
   for i in range(1, 17):
-    piece = random.choice(game_board_pieces)
-    game_board_solution_dict[i] = piece
-    game_board_pieces.pop(game_board_pieces.index(piece))
+    shape = random.choice(shape_nums)
+    game_board_solution_dict[i] = shape
+    shape_nums.pop(shape_nums.index(shape))
 
 # Prints title, start board and game instructions
 def start_game_setup():
@@ -83,7 +83,7 @@ def play_game():
 def matched_shapes_(flipped_pieces):
   print("You matched the shapes!")
   matched_shapes.extend(flipped_pieces)
-  game_board_pieces.extend(flipped_pieces)
+  shape_nums.extend(flipped_pieces)
   matching_shapes.remove(flipped_pieces)
 
 # Called when player matches 8 pairs from matching shapes list and 8 pairs remain 
