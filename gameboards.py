@@ -12,7 +12,7 @@ def print_board(game_board):
 start_game_board = []
 for i in range(4):
   start_game_board.append([" ________  " * 4, "\n| /\   _ | | /\   _ | | /\   _ | | /\   _ |", "\n|/__\/_ /| |/__\/_ /| |/__\/_ /| |/__\/_ /|",
-  "\n|  _  /\ | |  _  /\ | |  _  /\ | |  _  /\ |", "\n|_|_|_\/_| |_|_|_\/_| |_|_|_\/_| |_|_|_\/_|\n"]) 
+  "\n|  _  /\ | |  _  /\ | |  _  /\ | |  _  /\ |", "\n|_|_|_\/_| |_|_|_\/_| |_|_|_\/_| |_|_|_\/_|"]) 
 
 # Game boards for large and small size of four shapes with shape in each of 16 spots
 # Large triangle boards
