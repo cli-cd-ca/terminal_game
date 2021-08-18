@@ -45,7 +45,7 @@ def game_board_solution():
 def start_game_setup():
   print("_____________ Match the Shapes ____________")
   print_board(start_game_board)
-  print("Enter row and column number to flip pieces")
+  print("\nEnter row and column number to flip pieces")
 
 # Player can match shapes for 100 tries and exit game with empty inputs
 def play_game():
