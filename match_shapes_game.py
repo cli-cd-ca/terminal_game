@@ -1,8 +1,8 @@
 # Codecademy - CS101: Introduction to Programming - Final Project
 # Match the images memory game with shapes in 4x4 board where player flips pieces using row and column number until they match all shapes
 
-# imports print board function, start board, game boards for each sized shape, and game boards dictionary from game boards file
-from gameboards import print_board, start_game_board, larg_tri_boards, small_tri_boards, larg_squ_boards, small_squ_boards, larg_paral_boards, small_paral_boards, larg_diamd_boards, small_diamd_boards, game_boards_dict
+# imports print board function, start board, game board rows for each sized shape, and game piece rows from game boards file
+from gameboards import print_board, start_game_board, larg_tri_row, small_tri_row, larg_squ_row, small_squ_row, larg_paral_row, small_paral_row, larg_diamd_row, small_diamd_row, game_piece_row
 import random
 
 # Numbers that represent pairs of four shapes (triangle, square, parallelogram, and diamond) 
@@ -70,7 +70,7 @@ def play_game():
       flipped_pieces.append(shape_num)
       player_board = shapes_dict[shape_num] + player_piece
       print("\n" * 1010)
-      print_board(game_boards_dict[player_board])
+      #print_board(game_boards_dict[player_board])
       if len(flipped_pieces) == 3:
         flipped_pieces.pop(0)
       if flipped_pieces in matching_shapes:
