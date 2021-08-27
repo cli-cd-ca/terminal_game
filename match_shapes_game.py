@@ -44,8 +44,9 @@ def game_board_solution():
 # Prints title, start board and game instructions
 def start_game_setup():
   print("_____________ Match the Shapes ____________")
-  print_board(start_game_board)
-  print("\nEnter row and column number to flip pieces")
+  for row in start_game_board:
+    print_board(row)
+  print("Enter row and column number to flip pieces")
 
 # Player can match shapes for 100 tries and exit game with empty inputs
 def play_game():
@@ -68,9 +69,8 @@ def play_game():
         print("You already matched that shape")
         continue
       flipped_pieces.append(shape_num)
-      player_board = shapes_dict[shape_num] + player_piece
       print("\n" * 1010)
-      #print_board(game_boards_dict[player_board])
+      print_player_board(int(row_num), int(column_num), shape_num)
       if len(flipped_pieces) == 3:
         flipped_pieces.pop(0)
       if flipped_pieces in matching_shapes:
@@ -78,6 +78,25 @@ def play_game():
       if len(matching_shapes) == 8:
         win_game()
         quit()
+
+# Prints game board with shape at player's row and column
+def print_player_board(row, column, shape):
+  shape_row = shapes_dict[shape]
+  shape_col = column - 1
+  if row == 1:
+    print_board(shape_row[shape_col])
+    print_board(game_piece_row[2])
+  if row == 2:
+    print_board(game_piece_row[0])
+    print_board(shape_row[shape_col])
+    print_board(game_piece_row[1])
+  if row == 3:
+    print_board(game_piece_row[1])
+    print_board(shape_row[shape_col])
+    print_board(game_piece_row[0])
+  if row == 4:
+    print_board(game_piece_row[2])
+    print_board(shape_row[shape_col])
 
 # Called when player matches two shapes in flipped pieces list above
 def matched_shapes_(flipped_pieces):
