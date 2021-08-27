@@ -20,11 +20,10 @@ game_board_solution_dict = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0
 game_board_dict = {"1x1": 1, "1x2": 2, "1x3": 3, "1x4": 4, "2x1": 5, "2x2": 6, "2x3": 7, "2x4": 8,
 "3x1": 9, "3x2": 10, "3x3": 11, "3x4": 12, "4x1": 13, "4x2": 14, "4x3": 15, "4x4": 16}
 
-# Number that represents every shape and its pair with a string name to identify 
-# game boards that correspond to the game board solution
-shapes_dict = {1: "larg_tri_", 2: "small_tri_", 3: "larg_squ_", 4: "small_squ_", 5: "larg_paral_", 6: "small_paral_", 
-7: "larg_diamd_", 8: "small_diamd_", 9: "larg_tri_", 10: "small_tri_", 11: "larg_squ_", 12: "small_squ_", 13: "larg_paral_",
-14: "small_paral_", 15: "larg_diamd_", 16: "small_diamd_"}
+# Number that represents matching shapes in the game board solution paired with the game board rows for each shape 
+shapes_dict = {1: larg_tri_row, 2: small_tri_row, 3: larg_squ_row, 4: small_squ_row, 5: larg_paral_row, 6: small_paral_row, 
+7: larg_diamd_row, 8: small_diamd_row, 9: larg_tri_row, 10: small_tri_row, 11: larg_squ_row, 12: small_squ_row, 13: larg_paral_row,
+14: small_paral_row, 15: larg_diamd_row, 16: small_diamd_row}
 
 # List of matching shapes from shapes dictionary to identify when player matches shapes
 # (the pairs are reversed so the player can match shapes in any order)
