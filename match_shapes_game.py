@@ -2,7 +2,7 @@
 # Match the images memory game with shapes on 4x4 board where player flips pieces using row and column number until they match all shapes
 
 # imports print board function, start board, game board rows for each sized shape, and game piece rows from game boards file
-from gameboards import print_board, start_game_board, larg_tri_row, small_tri_row, larg_squ_row, small_squ_row, larg_paral_row, small_paral_row, larg_diamd_row, small_diamd_row, game_piece_row
+from gameboards import *
 import random
 
 # Numbers that represent pairs of four shapes (triangle, square, parallelogram, and diamond) 
